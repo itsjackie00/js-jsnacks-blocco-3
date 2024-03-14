@@ -1,29 +1,22 @@
 //alert('funziona?');
 
 
-// SNACK 3
+// SNACK 4
 /*
-    Fai inserire un numero, che chiameremo N, all'utente.
-    Genera con una funzione N array, ognuno formato da 10 numeri casuali da 1 a 100.
-    Ogni volta che ne crei uno, stampalo.
+    scrivere uns funzione per verificare se un numero e pari o dispari, quindi chiedere un numero all'utente e comunicargli se è pari
+    o dispari
  */
 
-let userNumber = parseInt(prompt('Inserisci un numero'));
-console.log(userNumber);
+    let userNumber = parseInt(prompt('type a number'));
 
-for (let index = 0; index < userNumber; index++) {
-    console.log(randmNumbsArray());
-    
-}
+    let result = oddOrEven(userNumber);
+    console.log(result);
 
-function randmNumbsArray() {
-    let newArray = [];
-    for (let index = 0; index < 10; index++) {
-        newArray.push(getRndInteger(1,100));
+
+    function oddOrEven(number) {
+        if (number % 2 === 0) {
+            return 'even';
+        }else{
+            return 'odd';
+        }
     }
-    return newArray
-}
-
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-  }
